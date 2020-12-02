@@ -10,7 +10,7 @@ RUN pip install ipython
 
 WORKDIR /app
 
-RUN git clone https://github.com/EGC/decide.git .
+RUN git clone https://github.com/ivaperpin/egc20D01
 RUN pip install -r requirements.txt
 
 WORKDIR /app/decide
