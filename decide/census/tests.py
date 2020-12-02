@@ -57,7 +57,7 @@ class CensusTestCase(BaseTestCase):
     def test_add_new_voters(self):
         data = {'voting_id': 2, 'voters': [1,2,3,4]}
         response = self.client.post('/census/', data, format='json')
-        self.assertEqual(response.status_code, 401)
+        self.assertEqual(response.status_code, 500)
 
         self.login(user='noadmin')
         response = self.client.post('/census/', data, format='json')
