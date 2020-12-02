@@ -10,10 +10,17 @@ before_script:
   - psql -U postgres -c "ALTER USER decide CREATEDB"
 language: python
 python:
-  - "3.7"
+  - "3.6"
+  - "3.8"
+env:
+ - POSTGRESQL_VERSION=9.4 
+ - POSTGRESQL_VERSION=9.6
+before install: 
+ - sudo service postgresql stop && sudo service postgresql start $POSTGRESQL_VERSION
 install:
   - pip install -r requirements.txt
 script:
   - cd decide
-  - ./manage.py test
+  - ./manage.py test authentication
+  - ./manage.py test census
  
