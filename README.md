@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/ivaperpin/egc20D01.svg?branch=master)](https://travis-ci.org/ivaperpin/egc20D01)
 
 Plataforma voto electrónico educativa
 =====================================
